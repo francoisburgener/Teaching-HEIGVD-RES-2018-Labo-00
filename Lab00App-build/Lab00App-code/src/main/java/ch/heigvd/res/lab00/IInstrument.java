@@ -9,7 +9,7 @@ package ch.heigvd.res.lab00;
  *
  * @author franc
  */
-abstract class IInstrument {
+/*abstract class IInstrument {
 
     int soundVolume;
     String color;
@@ -59,4 +59,51 @@ class Flute extends IInstrument {
     String play() {
         return "";
     }
+}*/
+interface IInstrument {
+
+    public String play();
+
+    public int getSoundVolume();
+
+    public String getColor();
+
+}
+
+class Trumpet implements IInstrument {
+
+    @Override
+    public String play() {
+        return "pouet";
+    }
+
+    @Override
+    public int getSoundVolume() {
+        return 10;
+    }
+
+    @Override
+    public String getColor() {
+        return "golden";
+    }
+
+}
+
+class Flute implements IInstrument {
+
+    @Override
+    public String play() {
+        return "bip";
+    }
+
+    @Override
+    public int getSoundVolume() {
+        return 5;
+    }
+
+    @Override
+    public String getColor() {
+        return "red";
+    }
+    
 }
